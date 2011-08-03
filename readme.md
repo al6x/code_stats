@@ -2,7 +2,7 @@
 
 [![rails-thumb]][rails-img] [![some-os-projects-thumb]][some-os-projects-img] [![mongoid-vs-mongomapper-thumb]][mongoid-vs-mongomapper-img]
 
-There are on the screenshots: Complexity of [Rails libraries][rails], Comparing [some Open Source projects][some-os-projects], [MongoMapper vs Mongoid][mongoid-vs-mongomapper] (to see the report save the html file from link on Your computer and open it).
+Screenshots are showing us: Complexity of [Rails libraries][rails-img], Comparing [some Open Source projects][some-os-projects-img], [MongoMapper vs Mongoid][mongoid-vs-mongomapper-img] (You can see the actual .html files in [docs][docs]).
 
 # What's the point of these graphs and numbers?
 
@@ -36,6 +36,8 @@ code_stats /projects/* except: JavaScript
 [TODO efficiency: what code parts is most important]
 
 Copyright (c) Alexey Petrushin http://petrush.in, released under the MIT license.
+
+[docs]: https://github.com/alexeypetrushin/code_stats/tree/master/docs
 
 [rails-thumb]: https://github.com/alexeypetrushin/code_stats/raw/master/docs/rails.thumb.png
 [some-os-projects-thumb]: https://github.com/alexeypetrushin/code_stats/raw/master/docs/some-os-projects.thumb.png
