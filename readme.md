@@ -1,8 +1,8 @@
 # Code Stats
 
-[![rails-thumb]][rails] [![some-os-projects-thumb]][some-os-projects] [![mongoid-vs-mongomapper-thumb]][mongoid-vs-mongomapper]
+[![rails-thumb]][rails-img] [![some-os-projects-thumb]][some-os-projects-img] [![mongoid-vs-mongomapper-thumb]][mongoid-vs-mongomapper-img]
 
-Complexity of [Rails libraries][rails], Comparing [some Open Source projects][some-os-projects], [MongoMapper vs Mongoid][mongoid-vs-mongomapper]
+Complexity of [Rails libraries][rails], Comparing [some Open Source projects][some-os-projects], [MongoMapper vs Mongoid][mongoid-vs-mongomapper] (to see the actual report save the html file from link on Your computer and open it).
 
 I deliberately choose the Red color for the sources (and the Blue for specs / tests) because the less code - the better (in general, with other things been equal).
 
@@ -30,6 +30,10 @@ Copyright (c) Alexey Petrushin http://petrush.in, released under the MIT license
 [rails-thumb]: https://github.com/alexeypetrushin/code_stats/raw/master/docs/rails.thumb.png
 [some-os-projects-thumb]: https://github.com/alexeypetrushin/code_stats/raw/master/docs/some-os-projects.thumb.png
 [mongoid-vs-mongomapper-thumb]: https://github.com/alexeypetrushin/code_stats/raw/master/docs/mongoid-vs-mongomapper.thumb.png
+
+[rails-img]: https://github.com/alexeypetrushin/code_stats/raw/master/docs/rails.png
+[some-os-projects-img]: https://github.com/alexeypetrushin/code_stats/raw/master/docs/some-os-projects.png
+[mongoid-vs-mongomapper-img]: https://github.com/alexeypetrushin/code_stats/raw/master/docs/mongoid-vs-mongomapper.png
 
 [rails]: https://github.com/alexeypetrushin/code_stats/raw/master/docs/rails.html
 [some-os-projects]: https://github.com/alexeypetrushin/code_stats/raw/master/docs/some-os-projects.html
