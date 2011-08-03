@@ -2,13 +2,7 @@
 
 [![rails-thumb]][rails-img] [![some-os-projects-thumb]][some-os-projects-img] [![mongoid-vs-mongomapper-thumb]][mongoid-vs-mongomapper-img]
 
-Screenshots are showing us: Complexity of [Rails libraries][rails-img], Comparing [some Open Source projects][some-os-projects-img], [MongoMapper vs Mongoid][mongoid-vs-mongomapper-img] (You can see the actual .html files in [docs][docs]).
-
-# What's the point of these graphs and numbers?
-
-I deliberately choose the Red color for the sources (and the Blue for specs / tests) because the less code - the better (in general, with other things been equal).
-
-Code Stats sources is small and simple as an egg - You can easilly examine all sources in about 20-30 minutes and be able to easilly hack and customize it.
+Screenshots are showing us: Complexity of [Rails libraries][rails-img], comparison of [some Open Source projects][some-os-projects-img] and [MongoMapper vs Mongoid][mongoid-vs-mongomapper-img] (You can see actual .html report files in [docs][docs]).
 
 # Installation & Usage
 
@@ -25,15 +19,7 @@ code_stats /projects/wordpress
 code_stats /projects/* except: JavaScript
 ```
 
-# Power law, efficiency and decision making
-
-[TODO about the [Power law][power_law] (also known as the Pareto principle and the 80-20 rule) and it's fundamental nature]
-
-[TODO about my causes to write such strange tool: why it's so simple and why language-agnostic is important: find simple game project, compare my own projects with other, find big places in my sources, see spec/code ratio to evaluate helth of project]
-
-[TODO about decition makin: right now there's tons and tons and tons of tools, projects and all stuff, it's hard to navigate, examine and score them]
-
-[TODO efficiency: what code parts is most important]
+Also You can easily customize it, sources of Code Stats is small and simple as an egg - You can easilly examine all of them in about 20-30 minutes and be able to easilly hack it.
 
 Copyright (c) Alexey Petrushin http://petrush.in, released under the MIT license.
 
