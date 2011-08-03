@@ -1,6 +1,6 @@
 # Code Stats
 
-[![rails-img]][rails] [![some-os-projects-img]][some-os-projects] [![mongoid-vs-mongomapper-img]][mongoid-vs-mongomapper]
+[![][rails-img]][rails] [![][some-os-projects-img]][some-os-projects] [![][mongoid-vs-mongomapper-img]][mongoid-vs-mongomapper]
 
 Complexity of [Rails libraries][rails], Comparing [some Open Source projects][some-os-projects], [MongoMapper vs Mongoid][mongoid-vs-mongomapper]
 
