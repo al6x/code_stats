@@ -27,10 +27,10 @@ code_stat /projects/* except: JavaScript
 
 Copyright (c) Alexey Petrushin http://petrush.in, released under the MIT license.
 
-[rails-img]: raw/master/docs/rails.png
-[some-os-projects-img]: raw/master/docs/some-os-projects.png
-[mongoid-vs-mongomapper-img]: raw/master/docs/mongoid-vs-mongomapper.png
+[rails-img]: https://github.com/alexeypetrushin/code_stats/raw/master/docs/rails.png
+[some-os-projects-img]: https://github.com/alexeypetrushin/code_stats/raw/master/docs/some-os-projects.png
+[mongoid-vs-mongomapper-img]: https://github.com/alexeypetrushin/code_stats/raw/master/docs/mongoid-vs-mongomapper.png
 
-[rails-img]: raw/master/docs/rails.html
-[some-os-projects-img]: raw/master/docs/some-os-projects.html
-[mongoid-vs-mongomapper-img]: raw/master/docs/mongoid-vs-mongomapper.html
+[rails-img]: https://github.com/alexeypetrushin/code_stats/raw/master/docs/rails.html
+[some-os-projects-img]: https://github.com/alexeypetrushin/code_stats/raw/master/docs/some-os-projects.html
+[mongoid-vs-mongomapper-img]: https://github.com/alexeypetrushin/code_stats/raw/master/docs/mongoid-vs-mongomapper.html
