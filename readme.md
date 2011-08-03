@@ -12,14 +12,16 @@ This tool is language-agnostic, but it itself is made with Ruby, so You need Rub
 gem install code_stats2
 ```
 
-Now run it on some of Your projects, You can also specify some options (type code_stats without arguments to see full help):
+Now run it on some of Your projects, You can also specify some options (type '$ code_stats' without arguments to see full help):
 
 ``` bash
 code_stats /projects/wordpress
 code_stats /projects/* except: JavaScript
 ```
 
-Also You can easily customize it, sources of Code Stats is small and simple as an egg - You can easilly examine all of them in about 20-30 minutes and be able to easilly hack it.
+Also You can easily customize it, sources of Code Stats is small and simple as an egg.
+
+
 
 Copyright (c) Alexey Petrushin http://petrush.in, released under the MIT license.
 
