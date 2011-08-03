@@ -21,8 +21,8 @@ gem install code_stats2
 Now run it on some of Your projects, You can also specify some options (type code_stats without arguments to see full help):
 
 ``` bash
-code_stat /projects/wordpress
-code_stat /projects/* except: JavaScript
+code_stats /projects/wordpress
+code_stats /projects/* except: JavaScript
 ```
 
 # Power law, efficiency and decision making
