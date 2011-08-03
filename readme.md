@@ -1,6 +1,6 @@
 # Code Stats
 
-[![][rails-img]][rails] [![][some-os-projects-img]][some-os-projects] [![][mongoid-vs-mongomapper-img]][mongoid-vs-mongomapper]
+[![rails-thumb]][rails] [![some-os-projects-thumb]][some-os-projects] [![mongoid-vs-mongomapper-thumb]][mongoid-vs-mongomapper]
 
 Complexity of [Rails libraries][rails], Comparing [some Open Source projects][some-os-projects], [MongoMapper vs Mongoid][mongoid-vs-mongomapper]
 
@@ -27,10 +27,10 @@ code_stat /projects/* except: JavaScript
 
 Copyright (c) Alexey Petrushin http://petrush.in, released under the MIT license.
 
-[rails-img]: https://github.com/alexeypetrushin/code_stats/raw/master/docs/rails.png
-[some-os-projects-img]: https://github.com/alexeypetrushin/code_stats/raw/master/docs/some-os-projects.png
-[mongoid-vs-mongomapper-img]: https://github.com/alexeypetrushin/code_stats/raw/master/docs/mongoid-vs-mongomapper.png
+[rails-thumb]: https://github.com/alexeypetrushin/code_stats/raw/master/docs/rails.thumb.png
+[some-os-projects-thumb]: https://github.com/alexeypetrushin/code_stats/raw/master/docs/some-os-projects.thumb.png
+[mongoid-vs-mongomapper-thumb]: https://github.com/alexeypetrushin/code_stats/raw/master/docs/mongoid-vs-mongomapper.thumb.png
 
-[rails-img]: https://github.com/alexeypetrushin/code_stats/raw/master/docs/rails.html
-[some-os-projects-img]: https://github.com/alexeypetrushin/code_stats/raw/master/docs/some-os-projects.html
-[mongoid-vs-mongomapper-img]: https://github.com/alexeypetrushin/code_stats/raw/master/docs/mongoid-vs-mongomapper.html
+[rails]: https://github.com/alexeypetrushin/code_stats/raw/master/docs/rails.html
+[some-os-projects]: https://github.com/alexeypetrushin/code_stats/raw/master/docs/some-os-projects.html
+[mongoid-vs-mongomapper]: https://github.com/alexeypetrushin/code_stats/raw/master/docs/mongoid-vs-mongomapper.html
