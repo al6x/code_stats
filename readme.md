@@ -1,6 +1,8 @@
 # Code Stats
 
-MongoMapper vs Mongoid, Complexity of Rails libraries, Comparing some Open Source projects
+[![rails-img]][rails] [![some-os-projects-img]][some-os-projects] [![mongoid-vs-mongomapper-img]][mongoid-vs-mongomapper]
+
+Complexity of [Rails libraries][rails], Comparing [some Open Source projects][some-os-projects], [MongoMapper vs Mongoid][mongoid-vs-mongomapper]
 
 I deliberately choose the Red color for the sources (and the Blue for specs / tests) because the less code - the better (in general, with other things been equal).
 
@@ -25,4 +27,10 @@ code_stat /projects/* except: JavaScript
 
 Copyright (c) Alexey Petrushin http://petrush.in, released under the MIT license.
 
-[]
+[rails-img]: raw/master/docs/rails.png
+[some-os-projects-img]: raw/master/docs/some-os-projects.png
+[mongoid-vs-mongomapper-img]: raw/master/docs/mongoid-vs-mongomapper.png
+
+[rails-img]: raw/master/docs/rails.html
+[some-os-projects-img]: raw/master/docs/some-os-projects.html
+[mongoid-vs-mongomapper-img]: raw/master/docs/mongoid-vs-mongomapper.html
