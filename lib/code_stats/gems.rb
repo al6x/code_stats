@@ -1,6 +1,6 @@
 if respond_to? :fake_gem  
-  fake_gem 'ruby_ext'
-  fake_gem 'vfs'
-  fake_gem 'haml'  
-  fake_gem 'tilt'
+  fake_gem 'ruby_ext', '0.4.23'
+  fake_gem 'vfs', '0.3.9'
+  fake_gem 'haml', '3.1'
+  fake_gem 'tilt', '1.3'
 end
