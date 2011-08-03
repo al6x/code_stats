@@ -1,0 +1,31 @@
+#!/usr/bin/env ruby
+
+lib_dir = %(#{File.expand_path "#{__FILE__}/../.."}/lib)
+$LOAD_PATH << lib_dir unless $LOAD_PATH.include? lib_dir
+
+require 'code_stats'
+
+if ARGV.empty? or %w(-h --help help).any?{|k| ARGV.include? k}
+  puts <<-TEXT
+  Language-agnostic Code Statistics
+
+  Usage:
+    $ code_stats /projects/wordpress /projects/drupal
+    $ code_stats /projects/*
+    $ code_stats /projects/wordpress /projects/drupal except: JavaScript skip_filter: /tmp/
+  
+  Options:
+    except: JavaScript - analyze all languages except JavaScript
+    only: Ruby - analyze Ruby language only
+    specs_filter: regex, specifies should be path threated as specs, default: #{CodeStats::Project::DEFAUL_SPEC_FILTER.source}
+    skip_filter: regex, specifies paths that should be skipped, default: #{CodeStats::Project::DEFAUL_SKIP_FILTER.source}
+TEXT
+  exit
+end
+  
+args = RubyExt.argv
+options = args.extract_options!
+options2 = {}; options.each{|k, v| options2[k] = v ? v.to_sym : v}
+args << options2
+
+CodeStats.analyze_and_report *args

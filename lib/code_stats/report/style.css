@@ -1,0 +1,14 @@
+body {font-size: 14px; font-family: Arial, sans-serif;}
+h1 {margin: 20px; font-size: 20px;}
+p {margin: 20px;}
+
+.nowrap {white-space:nowrap;}
+.bold {font-weight: bold;}
+.report {font-size: 12px; border-collapse: collapse; text-align:left; margin: 20px;}
+.report th{font-size: 14px; font-weight:normal; border-bottom: 2px solid; padding: 10px 8px;}
+.report td{border-bottom: 1px solid; padding: 6px 8px;}
+
+.plot {margin: 20px; margin-bottom: 50px; width: 800px; height: 600px;}
+
+p.powered {font-size: 10px; margin: 25px; color: gray; text-align: right; position: absolute; top: 0; right: 0; border: 0;}
+p.powered a {text-decoration: none;}

@@ -1,0 +1,59 @@
+!!! 5
+%html  
+  %head
+    %style{type: 'text/css'}
+      = css
+      
+    / Ignore all this JS stuff, it's just some JS libraries explicitly embedded into single HTML file
+    %script{type: 'text/javascript'}
+      = js
+  %body
+    - print_by_lang = -> counts {counts.to_a.sort{|a, b| b[1] <=> a[1]}.collect{|lang, count| "#{lang}: #{count.to_s_with_delimiter}"}.join('<br/>')}
+         
+    %h1 Projects Statistics                
+    
+    #plot.plot      
+    
+    %h1 Details
+    
+    %script{type: 'text/javascript'}
+      - projects_js = projects.collect{|p| "['#{p.name}', #{p.characters_count}, #{p.specs.characters_count}]"}.join(",\n")
+      Report.plot('#chart', [
+      = projects_js
+      ]);
+  
+    %table.report
+      %thead
+        %tr
+          %th Name          
+          
+          %th Chars          
+          %th By Lang
+          - unless filters.empty?
+            %th Ignored
+          
+          %th Spec Chars
+          %th Spec by Lang
+          - unless filters.empty?
+            %th Spec Ignored
+            
+          %th Unknown
+      %tbody
+        - projects.each do |p|
+          %tr                        
+            %td= p.name
+            
+            %td.nowrap.bold= p.characters_count.to_s_with_delimiter
+            %td.nowrap= print_by_lang.call p.characters_count_by_language
+            - unless filters.empty?
+              %td.nowrap= print_by_lang.call p.ignored_characters_count_by_language
+            
+            %td.nowrap.bold= p.specs.characters_count.to_s_with_delimiter
+            %td.nowrap= print_by_lang.call p.specs.characters_count_by_language
+            - unless filters.empty?
+              %td.nowrap= print_by_lang.call p.specs.ignored_characters_count_by_language
+              
+            %td= p.unknown_extensions.sort.join(', ')
+    
+    %p.powered
+      Powered by <a href='https://github.com/alexeypetrushin/code_stats'>code_stat</a>
