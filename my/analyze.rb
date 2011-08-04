@@ -20,7 +20,7 @@ require 'code_stats'
 
 # Rails
 paths = "/Users/alex/other_projects/z-libs/rails".to_dir.dirs.collect{|dir| dir.path}.select{|dir| dir =~ /\/acti|\/railti/}
-# paths << "/Users/alex/projects/core"
+paths << "/Users/alex/projects/core"
 CodeStats.analyze_and_report(*(paths << {except: :JavaScript}))
 
 

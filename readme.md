@@ -1,12 +1,14 @@
-# Code Stats
+# CodeStats
+
+Source code statistics and metrics.
 
 [![rails-thumb]][rails-img] [![some-os-projects-thumb]][some-os-projects-img] [![mongoid-vs-mongomapper-thumb]][mongoid-vs-mongomapper-img]
 
-Screenshots are showing us: Complexity of [Rails libraries][rails-img], comparison of [some Open Source projects][some-os-projects-img] and [MongoMapper vs Mongoid][mongoid-vs-mongomapper-img] (You can see actual .html report files in [docs][docs]).
+Screenshots showing us: Complexity of [Rails libraries][rails-img], comparison of [some Open Source projects][some-os-projects-img] and [MongoMapper vs Mongoid][mongoid-vs-mongomapper-img] (You can see actual .html report files in [docs][docs]).
 
 # Installation & Usage
 
-This tool is language-agnostic, but it itself is made with Ruby, so You need Ruby installed to use it. Next, just install it as a gem:
+This tool is language-agnostic, but it itself is made with Ruby, so You need Ruby installed to use it, to install it type:
 
 ``` bash
 gem install code_stats2
@@ -19,9 +21,7 @@ code_stats /projects/wordpress
 code_stats /projects/* except: JavaScript
 ```
 
-Also You can easily customize it, sources of Code Stats is small and simple as an egg.
-
-
+Also You can easily customize it, sources are small and simple as an egg.
 
 Copyright (c) Alexey Petrushin http://petrush.in, released under the MIT license.
 

@@ -1,5 +1,5 @@
 *~
-.DS_Store
+**/.DS_Store
 .require_paths
 Thumbs.db
 projects_statistics.html
