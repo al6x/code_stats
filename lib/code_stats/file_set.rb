@@ -2,7 +2,7 @@ class CodeStats::FileSet
   def initialize
     @lines_count_by_language, @characters_count_by_language = Hash.new(0), Hash.new(0)
   end
-  
+
   def lines_count options = {}
     total_count = 0
     lines_count_by_language(options).each{|lang, count| total_count += count}
@@ -27,7 +27,7 @@ class CodeStats::FileSet
     @lines_count_by_language[script.class.alias.to_sym] += script.lines_count
     @characters_count_by_language[script.class.alias.to_sym] += script.characters_count
   end
-  
+
   AVAILIABLE_OPTIONS = [:only, :except]
 
   protected

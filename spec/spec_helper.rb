@@ -6,3 +6,7 @@ rspec do
     "#{__FILE__.dirname}/sample_project"
   end
 end
+
+CodeStats.class_eval do
+  def self.info msg; end
+end

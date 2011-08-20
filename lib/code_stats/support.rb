@@ -1,5 +1,5 @@
 String.class_eval do
-  # Ruby just crashes on some files, don't know why and don't want to 
+  # Ruby just crashes on some files, don't know why and don't want to
   # spend time on this shit, just found this hack somewhere in the internet.
   def force_utf8_encoding
     force_encoding('binary').gsub(156.chr,"Oe")

@@ -13,7 +13,7 @@ if ARGV.empty? or %w(-h --help help).any?{|k| ARGV.include? k}
     $ code_stats /projects/wordpress /projects/drupal
     $ code_stats /projects/*
     $ code_stats /projects/wordpress /projects/drupal except: JavaScript skip_filter: /tmp/
-  
+
   Options:
     except: JavaScript - analyze all languages except JavaScript
     only: Ruby - analyze Ruby language only
@@ -22,7 +22,7 @@ if ARGV.empty? or %w(-h --help help).any?{|k| ARGV.include? k}
 TEXT
   exit
 end
-  
+
 args = RubyExt.argv
 options = args.extract_options!
 options2 = {}; options.each{|k, v| options2[k] = v ? v.to_sym : v}

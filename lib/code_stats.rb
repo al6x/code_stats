@@ -10,11 +10,11 @@ require 'tilt'
 class CodeStats
   class << self
     def extensions; @extensions ||= {} end
-    
+
     attr_accessor :file_size_limit
-    attr_required :file_size_limit    
+    attr_required :file_size_limit
   end
-  
+
   self.file_size_limit = 500 * 1024
 end
 
