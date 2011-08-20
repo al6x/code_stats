@@ -1,15 +1,15 @@
 class CodeStats::Project
-  attr_reader :path, :name, :specs_filter, :skip_filter, :unknown_extensions
+  attr_reader :path, :name, :spec_filter, :skip_filter, :unknown_extensions
   attr_reader :sources, :specs
 
-  AVAILIABLE_OPTIONS = [:specs_filter, :skip_filter]
+  AVAILIABLE_OPTIONS = [:spec_filter, :skip_filter]
   DEFAUL_SPEC_FILTER = /\/tests?\/|\/specs?\//
   DEFAUL_SKIP_FILTER = /\/docs?\/|\/(s|ex)amples?\/|\/guides?\/|\/.git\/|\/tmp\/|database\.php/
 
   def initialize path, options = {}
     @path, @name = path, path.to_entry.name
     options.validate_options! *AVAILIABLE_OPTIONS
-    @specs_filter = options.include?(:specs_filter) ? options[:specs_filter] : DEFAUL_SPEC_FILTER
+    @spec_filter = options.include?(:spec_filter) ? options[:spec_filter] : DEFAUL_SPEC_FILTER
     @skip_filter = options.include?(:skip_filter) ? options[:skip_filter] : DEFAUL_SKIP_FILTER
     clear
   end
@@ -46,7 +46,7 @@ class CodeStats::Project
     end
 
     def source? file
-      !(specs_filter && (file.path.sub(path, '') =~ specs_filter))
+      !(spec_filter && (file.path.sub(path, '') =~ spec_filter))
     end
 
     def skip? file

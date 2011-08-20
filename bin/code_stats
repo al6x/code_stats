@@ -4,28 +4,41 @@ lib_dir = %(#{File.expand_path "#{__FILE__}/../.."}/lib)
 $LOAD_PATH << lib_dir unless $LOAD_PATH.include? lib_dir
 
 require 'code_stats'
+require 'optparse'
 
-if ARGV.empty? or %w(-h --help help).any?{|k| ARGV.include? k}
-  puts <<-TEXT
-  Language-agnostic Code Statistics
+options = {}
+OptionParser.new do |opts|
+  opts.banner =  <<-TEXT
+Language-agnostic Code Statistics
 
-  Usage:
-    $ code_stats /projects/wordpress /projects/drupal
-    $ code_stats /projects/*
-    $ code_stats /projects/wordpress /projects/drupal except: JavaScript skip_filter: /tmp/
+Usage:
+  $ code_stats /projects/wordpress /projects/drupal
+  $ code_stats /projects/*
+  $ code_stats /projects/wordpress --except JavaScript --skip /tmp/
 
-  Options:
-    except: JavaScript - analyze all languages except JavaScript
-    only: Ruby - analyze Ruby language only
-    specs_filter: regex, specifies should be path threated as specs, default: #{CodeStats::Project::DEFAUL_SPEC_FILTER.source}
-    skip_filter: regex, specifies paths that should be skipped, default: #{CodeStats::Project::DEFAUL_SKIP_FILTER.source}
 TEXT
-  exit
-end
 
-args = RubyExt.argv
-options = args.extract_options!
-options2 = {}; options.each{|k, v| options2[k] = v ? v.to_sym : v}
-args << options2
+  opts.on("--except LANG", "Analyze all languages except specified.") do |lang|
+    (options[:except] ||= []) << lang.to_sym
+  end
+  
+  opts.on("--only LANG", "Analyze only specified language(es).") do |lang|
+    (options[:only] ||= []) << lang.to_sym
+  end
+  
+  opts.on(
+    "--specs REGEX", 
+    "Specify paths that should be threated as specs/tests (default #{CodeStats::Project::DEFAUL_SPEC_FILTER.source})."
+  ) do |re|
+    options[:spec_filter] = Regexp.new(re)
+  end
 
-CodeStats.analyze_and_report *args
+  opts.on(
+    "--skip REGEX", 
+    "Specify paths that should be skipped (default #{CodeStats::Project::DEFAUL_SKIP_FILTER.source})."
+  ) do |re|
+    options[:skip_filter] = Regexp.new(re)
+  end
+end.parse!
+
+CodeStats.analyze_and_report *(ARGV + [options])

@@ -15,7 +15,7 @@ class CodeStats
       paths.collect!{|path| Dir[path]}.flatten!
 
       info <<-TEXT
-please wait, analyzing:
+please wait, analyzing following projects:
   #{paths.join("\n  ")}
 TEXT
 

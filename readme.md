@@ -18,7 +18,7 @@ Now run it on some of Your projects, You can also specify some options (type 'co
 
 ``` bash
 code_stats /projects/wordpress
-code_stats /projects/* except: JavaScript
+code_stats /projects/* --except JavaScript
 ```
 
 Also You can easily customize it, sources are small and simple as an egg.
