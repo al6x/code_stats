@@ -8,7 +8,7 @@ Screenshots showing us: Complexity of [Rails libraries][rails-img], comparison o
 
 # Installation & Usage
 
-This tool is language-agnostic, but it itself is made with Ruby, so You need Ruby installed to use it, to install it type:
+The tool is language-agnostic, but to use it You need Ruby installed, to install type:
 
 ``` bash
 gem install code_stats2
