@@ -41,7 +41,7 @@ TEXT
       report = Report.new(*(projects << lang_options)).render
 
       report_file = "./projects_statistics.html".to_file
-      report_file.write! report
+      report_file.write report
 
       info "done, statistics are in #{report_file}"
 
