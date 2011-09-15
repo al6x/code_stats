@@ -7,7 +7,7 @@ require 'code_stats'
 require 'optparse'
 
 options = {}
-OptionParser.new do |opts|
+parser = OptionParser.new do |opts|
   opts.banner =  <<-TEXT
 Language-agnostic Code Statistics
 
@@ -39,6 +39,11 @@ TEXT
   ) do |re|
     options[:skip_filter] = Regexp.new(re)
   end
-end.parse!
+end
+parser.parse!
 
-CodeStats.analyze_and_report *(ARGV + [options])
+if ARGV.empty?
+  puts parser.banner
+else
+  CodeStats.analyze_and_report *(ARGV + [options])
+end
