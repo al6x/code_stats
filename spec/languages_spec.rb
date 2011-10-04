@@ -5,7 +5,7 @@ shared_examples_for 'language' do
     lang = CodeStats.parse @script, @extension
     lang.code.should == <<-CODE
 code_a
-code_b 
+code_b
 CODE
     # lang.code.should_not include 'comment_a'
     # lang.code.should_not include 'comment_a2'
@@ -157,7 +157,7 @@ describe "Haml" do
 code_a
 / comment_a
 / comment_a2
-code_b 
+code_b
 HAML
   end
 end
@@ -169,7 +169,7 @@ describe "Erb" do
     @extension = :erb
     @script = <<-ERB
 code_a
-code_b 
+code_b
 ERB
   end
 end
@@ -181,7 +181,7 @@ describe "Rjs" do
     @extension = :rjs
     @script = <<-RJS
 code_a
-code_b 
+code_b
 RJS
   end
 end
@@ -217,5 +217,19 @@ code_a
 # comment_a2
 code_b # comment_b3
 PYTHON
+  end
+end
+
+describe "Clojure" do
+  it_should_behave_like "language"
+
+  before do
+    @extension = :clj
+    @script = <<-CLOJURE
+code_a
+; comment_a
+; comment_a2
+code_b ; comment_b3
+CLOJURE
   end
 end

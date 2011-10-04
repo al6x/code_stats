@@ -131,4 +131,12 @@ module CodeStats::Languages
 
     extensions :py
   end
+
+  class Clojure < Abstract
+    extensions :clj
+
+    def code
+      @code ||= text.substitute(/^;.+?[\n\z]/m, '').substitute(/;.+?$/, '')
+    end
+  end
 end

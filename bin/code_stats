@@ -21,20 +21,20 @@ TEXT
   opts.on("--except LANG", "Analyze all languages except specified.") do |lang|
     (options[:except] ||= []) << lang.to_sym
   end
-  
+
   opts.on("--only LANG", "Analyze only specified language(es).") do |lang|
     (options[:only] ||= []) << lang.to_sym
   end
-  
+
   opts.on(
-    "--specs REGEX", 
+    "--specs REGEX",
     "Specify paths that should be threated as specs/tests (default #{CodeStats::Project::DEFAUL_SPEC_FILTER.source})."
   ) do |re|
     options[:spec_filter] = Regexp.new(re)
   end
 
   opts.on(
-    "--skip REGEX", 
+    "--skip REGEX",
     "Specify paths that should be skipped (default #{CodeStats::Project::DEFAUL_SKIP_FILTER.source})."
   ) do |re|
     options[:skip_filter] = Regexp.new(re)
