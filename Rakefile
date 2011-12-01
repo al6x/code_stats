@@ -1,6 +1,6 @@
 require 'rake_ext'
 
-project(
+project \
   name: "code_stats",
   official_name: 'code_stats2',
   gem: true,
@@ -12,4 +12,3 @@ project(
 
   author: "Alexey Petrushin",
   homepage: "http://github.com/alexeypetrushin/code_stats"
-)
