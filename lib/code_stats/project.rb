@@ -4,7 +4,7 @@ class CodeStats::Project
 
   AVAILIABLE_OPTIONS = [:spec_filter, :skip_filter]
   DEFAUL_SPEC_FILTER = /\/tests?\/|\/specs?\//
-  DEFAUL_SKIP_FILTER = /\/docs?\/|\/(s|ex)amples?\/|\/guides?\/|\/.git\/|\/tmp\/|\/old\/|database\.php/
+  DEFAUL_SKIP_FILTER = /\/docs?\/|\/(s|ex)amples?\/|\/guides?\/|\/.git\/|\/tmp\/|\/old\/|database\.php|\/vendor\//
 
   def initialize path, options = {}
     @path, @name = path, path.to_entry.name

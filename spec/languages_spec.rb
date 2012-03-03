@@ -29,7 +29,7 @@ comment_a
  */
 // comment_b
 // comment_b2
-code_b // comment_b3
+code_b// comment_b3
 JAVA
   end
 end
@@ -49,7 +49,7 @@ comment_a
  */
 // comment_b
 // comment_b2
-code_b // comment_b3
+code_b// comment_b3
 JAVA_SCRIPT
   end
 
@@ -89,7 +89,7 @@ describe "Ruby" do
 code_a
 # comment_a
 # comment_a2
-code_b # comment_b3
+code_b# comment_b3
 RUBY
   end
 end
@@ -109,7 +109,7 @@ comment_a
  */
 // comment_b
 // comment_b2
-code_b // comment_b3
+code_b// comment_b3
 CPP
   end
 end
@@ -129,7 +129,7 @@ comment_a2
 ###
 # comment_b
 # comment_b2
-code_b # comment_b3
+code_b# comment_b3
 COFFEE_SCRIPT
   end
 end
@@ -143,7 +143,7 @@ describe "Yaml" do
 code_a
 # comment_a
 # comment_a2
-code_b # comment_b3
+code_b# comment_b3
 YAML
   end
 end
@@ -201,7 +201,7 @@ comment_a
  */
 // comment_b
 // comment_b2
-code_b // comment_b3
+code_b// comment_b3
 PHP
   end
 end
@@ -215,7 +215,7 @@ describe "Python" do
 code_a
 # comment_a
 # comment_a2
-code_b # comment_b3
+code_b# comment_b3
 PYTHON
   end
 end
@@ -229,7 +229,46 @@ describe "Clojure" do
 code_a
 ; comment_a
 ; comment_a2
-code_b ; comment_b3
+code_b; comment_b3
 CLOJURE
+  end
+end
+
+describe "Scala" do
+  it_should_behave_like "language"
+
+  before do
+    @extension = :scala
+    @script = <<-SCALA
+code_a
+/*
+comment_a
+*/
+/*
+ * comment_a2
+ */
+// comment_b
+// comment_b2
+code_b// comment_b3
+SCALA
+  end
+end
+
+describe "Html" do
+  it_should_behave_like "language"
+
+  before do
+    @extension = :html
+    @script = <<-HTML
+code_a
+<!--
+comment_a
+-->
+<!--
+ comment_a2
+-->
+code_b<!-- comment_b3 -->
+
+HTML
   end
 end

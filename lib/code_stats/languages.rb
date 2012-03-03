@@ -46,7 +46,10 @@ module CodeStats::Languages
 
   module CComments
     def code
-      @code ||= text.substitute(/\/\*.+?\*\/\n?/m, '').substitute(/^\/\/.+?[\n\z]/m, '').substitute(/\/\/.+?$/, '')
+      @code ||= text.
+        substitute(/\/\*.+?\*\/\n?/m, '').
+        substitute(/^\/\/.+?[\n\z]/m, '').
+        substitute(/\/\/.+?$/, '')
     end
   end
 
@@ -92,7 +95,10 @@ module CodeStats::Languages
     extensions :coffee
 
     def code
-      @code ||= text.substitute(/###.+?###\n?/m, '').substitute(/^#.+?[\n\z]/m, '').substitute(/#.+?$/, '')
+      @code ||= text.
+        substitute(/###.+?###\n?/m, '').
+        substitute(/^#.+?[\n\z]/m, '').
+        substitute(/#.+?$/, '')
     end
   end
 
@@ -137,6 +143,18 @@ module CodeStats::Languages
 
     def code
       @code ||= text.substitute(/^;.+?[\n\z]/m, '').substitute(/;.+?$/, '')
+    end
+  end
+
+  class Scala < Java
+    extensions :scala
+  end
+
+  class Html < Abstract
+    extensions :html, :xhtml
+
+    def code
+      @code ||= text.substitute(/<!--.+?-->\n?/m, '')
     end
   end
 end
